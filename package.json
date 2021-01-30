@@ -45,6 +45,7 @@
     "commitlint": "^11.0.0",
     "husky": "^4.3.8",
     "import-sort-style-module": "^6.0.0",
+    "lint-staged": ">=10",
     "prettier": "^2.2.1",
     "prettier-plugin-import-sort": "^0.0.6"
   },
@@ -55,7 +56,15 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,css,md}": [
+      "prettier --write",
+      "eslint --fix --max-warnings=0",
+      "react-scripts test --bail --findRelatedTests"
+    ]
   }
 }
