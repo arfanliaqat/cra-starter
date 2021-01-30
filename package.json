@@ -41,6 +41,9 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^11.0.0",
+    "commitlint": "^11.0.0",
+    "husky": "^4.3.8",
     "import-sort-style-module": "^6.0.0",
     "prettier": "^2.2.1",
     "prettier-plugin-import-sort": "^0.0.6"
@@ -48,6 +51,11 @@
   "importSort": {
     ".js, .jsx, .ts, .tsx": {
       "style": "module"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
