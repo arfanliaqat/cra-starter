@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "release": "standard-version"
   },
   "eslintConfig": {
     "extends": [
@@ -47,7 +48,8 @@
     "import-sort-style-module": "^6.0.0",
     "lint-staged": ">=10",
     "prettier": "^2.2.1",
-    "prettier-plugin-import-sort": "^0.0.6"
+    "prettier-plugin-import-sort": "^0.0.6",
+    "standard-version": "^9.1.0"
   },
   "importSort": {
     ".js, .jsx, .ts, .tsx": {
