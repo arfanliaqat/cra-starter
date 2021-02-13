@@ -66,11 +66,11 @@
     }
   },
   "lint-staged": {
-    "*.md": "prettier --write",
-    "*.{ts,tsx,js,css}": [
+    "*.{md,css}": "prettier --write",
+    "*.{ts,tsx,js,jsx}": [
       "prettier --write",
       "eslint --fix --max-warnings=0",
-      "react-scripts test --bail --findRelatedTests"
+      "react-scripts test --watchAll=false --bail --findRelatedTests"
     ]
   }
 }
