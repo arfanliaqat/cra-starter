@@ -66,7 +66,8 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx,js,css,md}": [
+    "*.md": "prettier --write",
+    "*.{ts,tsx,js,css}": [
       "prettier --write",
       "eslint --fix --max-warnings=0",
       "react-scripts test --bail --findRelatedTests"
