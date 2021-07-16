@@ -25,6 +25,11 @@
     "eject": "react-scripts eject",
     "release": "standard-version"
   },
+  "standard-version": {
+    "skip": {
+      "tag": true
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
